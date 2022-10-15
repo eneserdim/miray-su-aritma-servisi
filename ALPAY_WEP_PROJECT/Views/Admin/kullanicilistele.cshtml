@@ -1,0 +1,43 @@
+﻿@using ALPAY_WEP_PROJECT.Models.Siniflar
+@model List<User>
+@{
+    ViewBag.Title = "kullanicilistele";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card col-md-6" style="text-align:center">
+    <div class="card-header">
+        <h3 class="card-title">Kullanıcı Listesi</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Kullanıcı Adı</th>
+                    <th>Şifre</th>
+                    <th>Rol</th>
+                </tr>
+                @foreach (var u in Model)
+                {
+                    <tr>
+                        <td>@u.UserName</td>
+                        <td>@u.Password</td>
+                        <td><strong>Admin</strong></td>
+                    </tr>
+}
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <!-- /.card-body -->
+    <div class="card-footer clearfix">
+        <ul class="pagination pagination-sm m-0 float-right">
+            <div class="pagination-container"><ul class="pagination"></ul></div>
+        </ul>
+    </div>
+</div>
+<br />
+<br />
+

@@ -1,0 +1,217 @@
+﻿
+@{
+    ViewBag.Title = "anasayfa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- Slick SLIDER  AREA -->
+<div class="witr_slick_slider_area slider1" style="margin-top:114px;">
+    <div class="container-fluid">
+        <section class="p-0">
+            <div class="container-fluid p-0">
+                <div class="responsive-slider" data-spy="responsive-slider" data-autoplay="true">
+                    <div class="slides" data-group="slides">
+                        <ul>
+                            <li>
+                                <div class="slide-body" data-group="slide">
+                                    <img src="~/Content/Themes/assets/images/su-aritma-serivisi.png">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+
+
+<!-- fridge_serive_area -->
+<div class="fridge_serive_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="witr_section_title">
+                    <div class="witr_section_title_inner text-center">
+                        <h2>MİRAY SU - İstanbul Su Arıtma Servisi</h2>
+                        <h3>Hizmetlerimiz</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- fridge_serive2_area -->
+@Html.Action("anasayfaurunler", "miraysu")
+
+
+<!-- fridge_about_area -->
+
+@Html.Action("anasayfahakkimizda", "miraysu")
+
+<!-- URUN LISTELEME ================================================== -->
+
+<div class="container">
+    <div class="sec-title text-center wow fadeIn" data-wow-delay="100ms">
+        <span class="fw-bold display-28 d-block mb-2" style="color: #007aff">Miray Su Arıtma Servisi</span>
+        <p class="h3 mb-4 z-index-2 position-relative">Su Arıtma Cihazları</p>
+        <div class="border-box center"></div>
+    </div>
+    <div class="row g-xl-5 mt-n2-2">
+        <div class="col-md-6 col-lg-4 mt-2-2 wow fadeInUp" data-wow-delay="200ms">
+            <article class="card card-style4 border-info shadow h-100">
+                <div class="blog-img position-relative overflow-hidden">
+                    <img src="~/Content/urunler/roben-mavi-2048x2021.png" alt="...">
+                    <a href="#!" class="category">Miray Su Arıtma Servisi</a>
+                </div>
+                <div class="card-body p-4">
+                    <a href="#!" class="category" style="margin:auto"><strong>Roben Su Arıtma Cihazı</strong> </a>
+                    <p>
+                        Arıtma kapasitesi: 75GPD 285 Litre/Gün
+
+                        Maksimum tank kapasitesi 12 litre
+
+                        5 Aşamalı Su Arıtma
+
+                        En:28 cm, Yükseklik: 28 cm, Uzunluk 49 cm
+                    </p>
+                    <div style="text-align:center">
+                        <button type="button" class="btn btn-outline-primary" onclick="window.location.href = '/Canesar/İletisimFormu';">Cihazı İncele</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6 col-lg-4 mt-2-2 wow fadeInUp" data-wow-delay="200ms">
+            <article class="card card-style4 border-info shadow h-100">
+                <div class="blog-img position-relative overflow-hidden">
+                    <img src="~/Content/urunler/Aqua Factory Evsel Su Arıtma Cihazı.png" alt="..." style="width:368px;height:363px;">
+                    <a href="#!" class="category">Miray Su Arıtma Servisi</a>
+                </div>
+                <div class="card-body p-4">
+                    <a href="#!" class="category" style="margin:auto"><strong>Aqua Factory Evsel Su Arıtma Cihazı</strong> </a>
+                    <p>
+                        Günde 300 Litre Arıtma Kapasitesi <br />
+
+                        100 GPD POMPA <br />
+
+                        5 Aşamalı Su Arıtma <br />
+
+                        Şık ve Kompakt Tasarım
+                    </p>
+                    <div style="text-align:center">
+                        <button type="button" class="btn btn-outline-primary" onclick="window.location.href = '/Canesar/İletisimFormu';">Cihazı İncele</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6 col-lg-4 mt-2-2 wow fadeInUp" data-wow-delay="200ms">
+            <article class="card card-style4 border-info shadow h-100">
+                <div class="blog-img position-relative overflow-hidden">
+                    <img src="~/Content/urunler/RO 500 WP Direk Akışlı Su Arıtma Cihazı.png" alt="...">
+                    <a href="#!" class="category">Miray Su Arıtma Servisi</a>
+                </div>
+                <div class="card-body p-4">
+                    <a href="#!" class="category" style="margin:auto"><strong>RO 500 WP Direk Akışlı Su Arıtma Cihazı</strong> </a>
+                    <p>
+                        Günde 1250 Litre Arıtma Kapasitesi
+
+                        40 litre Dahili Depolama Tankı
+
+                        6 Aşamalı Su Arıtma
+
+                        Şık ve Kompakt Tasarım
+                    </p>
+                    <div style="text-align:center">
+                        <button type="button" class="btn btn-outline-primary" onclick="window.location.href = '/Canesar/İletisimFormu';">Cihazı İncele</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+    <br />
+    <div class="row g-xl-5 mt-n2-2">
+        <div class="col-md-6 col-lg-4 mt-2-2 wow fadeInUp" data-wow-delay="200ms">
+            <article class="card card-style4 border-info shadow h-100">
+                <div class="blog-img position-relative overflow-hidden">
+                    <img src="~/Content/urunler/Pompalı Açık Kasa LG Filtreli Su Arıtma Cihazı.png" alt="...">
+                    <a href="#!" class="category">Miray Su Arıtma Servisi</a>
+                </div>
+                <div class="card-body p-4">
+                    <a href="#!" class="category" style="margin:auto"><strong>Pompalı Açık Kasa LG Filtreli Su Arıtma Cihazı</strong> </a>
+                    <p>
+                        Günde 325 Litre Arıtma Kapasitesi <br />
+
+                        12 Litre Paslanmaz Çelik Tank <br />
+
+                        6 Aşamalı Su Arıtma <br />
+
+                        Şık ve Kompakt Tasarım
+                    </p>
+                    <div style="text-align:center">
+                        <button type="button" class="btn btn-outline-primary" onclick="window.location.href = '/Canesar/İletisimFormu';">Cihazı İncele</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6 col-lg-4 mt-2-2 wow fadeInUp" data-wow-delay="200ms">
+            <article class="card card-style4 border-info shadow h-100">
+                <div class="blog-img position-relative overflow-hidden">
+                    <img src="~/Content/urunler/RAVENT SMART 5A Su Arıtma Cihazı.png" alt="..." style="width:368px;height:363px;">
+                    <a href="#!" class="category">Miray Su Arıtma Servisi</a>
+                </div>
+                <div class="card-body p-4">
+                    <a href="#!" class="category" style="margin:auto"><strong>RAVENT SMART 5A Su Arıtma Cihazı</strong> </a>
+                    <p>
+                        LG 80GPD Membran <br />
+
+                        2.2 Galon Metal Basınç Denge Tankı <br />
+
+                        4 Aşamalı Su Arıtma <br />
+
+                        Şık ve Kompakt Tasarım
+
+
+                    </p>
+                    <div style="text-align:center">
+                        <button type="button" class="btn btn-outline-primary" onclick="window.location.href = '/Canesar/İletisimFormu';">Cihazı İncele</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6 col-lg-4 mt-2-2 wow fadeInUp" data-wow-delay="200ms">
+            <article class="card card-style4 border-info shadow h-100">
+                <div class="blog-img position-relative overflow-hidden">
+                    <img src="~/Content/urunler/LG Chem Berrak Serisi.png" alt="...">
+                    <a href="#!" class="category">Miray Su Arıtma Servisi</a>
+                </div>
+                <div class="card-body p-4">
+                    <a href="#!" class="category" style="margin:auto"><strong>LG Chem Berrak Serisi</strong> </a>
+                    <p>
+                        Günde 300 Litre Arıtma Kapasitesi <br />
+
+                        8 litre Dahili Depolama Tankı <br />
+
+                        5 Aşamalı Su Arıtma <br />
+
+                        Şık ve Kompakt Tasarım
+                    </p>
+                    <div style="text-align:center">
+                        <button type="button" class="btn btn-outline-primary" onclick="window.location.href = '/Canesar/İletisimFormu';">Cihazı İncele</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+<br />
+<br />
+<br />
+
+
+

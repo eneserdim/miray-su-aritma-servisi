@@ -1,0 +1,42 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@using ALPAY_WEP_PROJECT.Models.Siniflar
+@model IPagedList<Blog>
+@{
+    ViewBag.Title = "bloglistele";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Tarih</th>
+        <th>Düzenleme</th>
+    </tr>
+    @foreach (var u in Model)
+    {
+        <tr>
+            <td>@u.BlogID</td>
+            <td>@u.BlogBaslik</td>
+            <td>@u.DateTime.ToLongDateString()</td>
+            <td> <a href="/Admin/blogsil/@u.BlogID" class="btn btn-danger">Sil</a>
+             <a href="/Admin/bloggetir/@u.BlogID" class="btn btn-success">Güncelle</a>
+             <a href="/Blog/blogdetay/@u.BlogID" target="_blank" class="btn btn-info">Görüntüle</a> 
+            </td>
+        </tr>
+}
+
+</table>
+@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("BlogList", new { sayfa })
+, new PagedListRenderOptions
+{
+    LiElementClasses = new List<string>
+    {"page-link"}
+})
+<a href="/Admin/yeniblog/" class="btn btn-info" style="margin-left:500px">Yeni Blog</a>
+<br />
+<br />
+
+

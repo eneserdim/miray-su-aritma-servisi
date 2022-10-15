@@ -1,0 +1,66 @@
+﻿@using ALPAY_WEP_PROJECT.Models.Siniflar
+@model List<Blog>
+@{
+    ViewBag.Title = "BlogDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+
+
+<div class="blog_area single_service_page">
+    <div class="banner-page pt-125 pb-125" style="background-image: url(../../Content/Themes/assets/photo/hizmetler.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="banner-page-wrapper">
+                        <div class="banner-page-text">
+                            @foreach (var item in Model)
+                            {
+                                <h2>@item.BlogBaslik</h2>
+                            }
+
+                        </div>
+                        <ul class="banner-page-menu">
+                            <li><a href="https://suaritmaservisistanbul.com">Anasayfa</a></li>
+                                <li><a href="/Blog/BlogListesi"><span>Blog</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-7 col-sm-12">
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <div class="service-item all_color_service text-left ">
+                            <div class="service_top_image">
+                                @foreach (var item in Model)
+                                {
+                                    <img src="@Url.Content(item.BlogFotograf)" alt="" style="width:770px;height:470px">
+                                }
+
+                            </div>
+                            <div class="text_box all_icon_color">
+                                <h3>
+                                    @foreach (var item in Model)
+                                    {
+                                        @item.BlogBaslik
+                                    }
+                                </h3>
+                                <p>
+                                    @foreach (var item in Model)
+                                    {
+                                        @Html.Raw(item.BlogAciklama)
+                                    }
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

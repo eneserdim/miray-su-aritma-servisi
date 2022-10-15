@@ -1,0 +1,36 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@using ALPAY_WEP_PROJECT.Models.Siniflar
+@model IPagedList<Service>
+
+<div class="fridge_serive2_area">
+    <div class="container">
+        <div class="service_active">
+            <div class="witr_cars11_idteam ">
+                <!-- fridge_serive2_01 -->
+                @foreach (var item in Model)
+                {
+                    <div class="witr_all_mb_30 col-lg-12 ">
+                        <div class=" witr_service_11 all_color_service  text- ">
+                            <div class="service_top_image">
+                                <img src="@Url.Content(item.Images)" alt="">
+                            </div>
+                            <div class=" wirt_detail_texti">
+                                <div class=" wirt_detail_icon all_icon_color"></div>
+                                <div class="wirt_detail_title">
+                                    <h3><a href="#">@item.Tittle</a></h3>
+                                </div>
+                            </div>
+                            <div class="wirt_detail_content">
+                                <p>@Html.Raw(item.Description)</p>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+            </div>
+        </div>
+    </div>
+</div>

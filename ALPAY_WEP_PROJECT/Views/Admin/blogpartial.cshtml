@@ -1,0 +1,47 @@
+﻿
+@using PagedList
+@using PagedList.Mvc
+@using ALPAY_WEP_PROJECT.Models.Siniflar
+@model IPagedList<Blog>
+
+
+<div class="card card-danger">
+    <div class="card-header">
+        <h3 class="card-title">Eklenen Son 5 Blog Yazısı</h3>
+        <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                <i class="fas fa-minus"></i>
+            </button>
+        </div>
+    </div>
+    <div class="card-body p-0" style="display: block;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Blog Adı</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.BlogID</td>
+                        <td>@item.BlogBaslik</td>
+                        <td class="text-right py-0 align-middle">
+                            <div class="btn-group btn-group-sm">
+                                <a href="/Admin/BlogGetir/@item.BlogID" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                <a href="/Admin/BlogSil/@item.BlogID" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                            </div>
+                        </td>
+                    </tr>
+}
+
+            </tbody>
+        </table>
+    </div>
+    <!-- /.card-body -->
+    <div class="card-footer clearfix">
+        <a href="/Admin/bloglistele" class="btn btn-success"><i class="fas fa-eye"> Tüm Yazıları Görüntüle</i></a>
+    </div>
+</div>

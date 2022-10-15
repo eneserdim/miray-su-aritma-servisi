@@ -1,0 +1,67 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@using ALPAY_WEP_PROJECT.Models.Siniflar
+@model IPagedList<Product>
+@{ ViewBag.Title = "urunlerimiz";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+@{
+    foreach (var item in Model)
+    {
+        var deneme = @Html.Raw(item.Description);
+    }
+}
+
+
+<div class="fridge_about_area about1">
+    <div class="banner-page pt-125 pb-125" style="background-image: url(../../Content/Themes/assets/photo/hizmetler.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="banner-page-wrapper">
+                        <div class="banner-page-text">
+                            <h2>Su Arıtma Cihazları</h2>
+                        </div>
+                        <ul class="banner-page-menu">
+                            <li><a href="https://suaritmaservisistanbul.com">Anasayfa</a></li>
+                            <li><span>Su Arıtma Cihazları</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <br />
+</div>
+
+    <div class="container">
+        <div class="sec-title text-center wow fadeIn" data-wow-delay="100ms">
+            <span class="fw-bold display-28 d-block mb-2" style="color: #007aff">Miray Su Arıtma Servisi</span>
+            <p class="h3 mb-4 z-index-2 position-relative">Ürünlerimiz</p>
+            <div class="border-box center"></div>
+        </div>
+        <div class="row g-xl-5 mt-n2-2">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 col-lg-4 mt-2-2 wow fadeInUp" data-wow-delay="200ms">
+                    <article class="card card-style4 border-info shadow h-100">
+                        <div class="blog-img position-relative overflow-hidden">
+                            <img src="@Url.Content(item.Images)" alt="...">
+                            <a href="#!" class="category">Miray Su Arıtma Servisi</a>
+                        </div>
+                        <div class="card-body p-4">
+                            <a href="#!" class="category" style="margin:auto"><strong>@item.Tittle</strong> </a>
+
+                            <p>
+                            </p>
+                            <div style="text-align:center">
+
+                                <button type="button" class="btn btn-outline-primary"><a href="/miraysu/urundetay/@item.ID" style="color:white">Cihazı İncele</a></button>
+                            </div>
+                        </div>
+                    </article>
+                </div> <br /> <br /> <br /><br /> <br /> <br />}
+
+
+        </div>
+    </div>
+
+

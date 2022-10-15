@@ -1,0 +1,37 @@
+﻿@using ALPAY_WEP_PROJECT.Models.Siniflar
+@model List<About>
+
+<div class="fridge_about_area home1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="witr_play_vi witr_all_color_v">
+                    <div class="witr_about_image">
+                        @foreach (var item in Model)
+                        {
+                            <img src="@Url.Content(item.Images)" alt="">
+                        }
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="witr_section_title">
+                    <div class="witr_section_title_inner text-left">
+                        <h2>MİRAY SU - İstanbul Su Arıtma Servisi</h2>
+                        @foreach (var item in Model)
+                        {
+                            <h3>@item.Title</h3>
+                        }
+                        <p style="font-family:'Times New Roman', Times, serif">
+                            @foreach (var item in Model)
+                            {
+                                @Html.Raw(item.Description)
+                            }
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

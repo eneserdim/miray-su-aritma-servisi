@@ -1,0 +1,75 @@
+﻿@using ALPAY_WEP_PROJECT.Models.Siniflar
+@model ListViewModel
+@{
+    ViewBag.Title = "hizlimenu";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-info">
+            <div class="inner">
+                <h3>@ViewBag.v1 Adet</h3>
+
+                <p>Toplam Blog Sayısı</p>
+            </div>
+            <div class="icon">
+                <i class="nav-icon fas fa-book"></i>
+            </div>
+            <a href="/Admin/bloglistele" class="small-box-footer">Blog Listesi <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-success">
+            <div class="inner">
+                <h3>@ViewBag.v2 Adet</h3>
+
+                <p>Toplam Ürün Sayısı</p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+            </div>
+            <a href="/Admin/urunlistele" class="small-box-footer">Ürün Listesi <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-warning">
+            <div class="inner">
+                <h3>@ViewBag.v3 Adet</h3>
+
+                <p>Himzet Bölgeleri</p>
+            </div>
+            <div class="icon">
+                <i class="nav-icon fa fa-envelope-open-text"></i>
+            </div>
+            <a href="/Admin/bolgelistele/" class="small-box-footer">Hizmet Bölgeleri <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-danger">
+            <div class="inner">
+                <h2 href="http://suaritmaservisistanbul.com/">Alpay Dental</h2>
+
+                <p>Web Sitesi</p>
+            </div>
+            <div class="icon">
+                <i class="nav-icon fas fa-home"></i>
+            </div>
+            <a href="http://suaritmaservisistanbul.com/" class="small-box-footer" target="_blank">Siteyi Görüntüle <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
+</div>
+
+@Html.Action("urunpartial", "Admin")
+
+@Html.Action("bolgepartial", "Admin")
+
+@Html.Action("blogpartial", "Admin")

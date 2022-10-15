@@ -1,0 +1,59 @@
+﻿@using ALPAY_WEP_PROJECT.Models.Siniflar
+@model List<Product>
+@{
+    ViewBag.Title = "urundetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="breadcumb-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 txtc  text-center ccase">
+                <div class="brpt">
+                    <h2>Ürün Adı Gelecek</h2>
+                </div>
+                <div class="breadcumb-inner">
+                    <ul>
+                        <li><a href="https://suaritmaservisistanbul.com">Anasayfa</a></li>
+                        <li><i class="fas fa-angle-right"></i></li>
+                        <li><a href="/miraysu/urunlerimiz">Su Arıtma Cihazları</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="fridge_about_area about1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="witr_play_vi witr_all_color_v">
+                    <div class="witr_about_image">
+                        @foreach (var item in Model)
+                        {
+                            <img src="../../@Url.Content(item.Images)" alt="">
+                        }
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="witr_section_title">
+                    <div class="witr_section_title_inner text-left">
+                        <h2>Miray Su Arıtma Servisi</h2>
+                        @foreach (var item in Model)
+                        {
+                            <h3>@item.Tittle</h3>
+                            <p>@Html.Raw(item.Description)</p>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

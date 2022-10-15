@@ -1,0 +1,79 @@
+﻿@using ALPAY_WEP_PROJECT.Models.Siniflar
+@model List<About>
+@{
+    ViewBag.Title = "hakkimizda";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+<div class="fridge_about_area about1">
+    <div class="banner-page pt-125 pb-125" style="background-image: url(../../Content/Themes/assets/photo/hizmetler.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="banner-page-wrapper">
+                        <div class="banner-page-text">
+                            <h2>Hakkımızda</h2>
+                        </div>
+                        <ul class="banner-page-menu">
+                            <li><a href="https://suaritmaservisistanbul.com">Anasayfa</a></li>
+                            <li><span>Hakkımızda</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="witr_play_vi witr_all_color_v">
+                    <div class="witr_about_image">
+                        @foreach (var item in Model)
+                        {
+                            <img src="../@Url.Content(item.Images)" alt="">
+                        }
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="witr_section_title">
+                    <div class="witr_section_title_inner text-left">
+                        <h2>Miray Su Arıtma Servisi</h2>
+                        @foreach (var item in Model)
+                        {
+                            <h3>@item.Title</h3>
+                            <p style="color:black">@Html.Raw(item.Description)</p>
+                        }
+
+                    </div>
+                </div>
+                <div class="witr_adv_tab_area witr_taba_style1 tab_all_colora">
+                    <!-- Nav tabs -->
+                    <!-- Tab panes -->
+                    <div class="witr_adv_tab_content">
+                        <div class="tab-content">
+                            <div class="tab-pane fade epo-93d09dd active show" id="tx_tab_01">
+                                <div class="witr_single_progress all_color_bar">
+                                    <div class="witr_title2">
+                                        <span class="witr_label">Tecrübe </span>
+                                    </div>
+                                    <div class="progress witr_progress-style2">
+                                        <div class="progress-bar wow fadeInLeft animated animated animated animated" data-wow-duration="1.5s" data-wow-delay="0.2s" style="width: 100%; visibility: visible; animation-duration: 1.5s; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                                            <span class="witr_percent">100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
